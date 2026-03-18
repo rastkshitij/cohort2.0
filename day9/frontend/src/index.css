@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body , #root{
+    height: 100%;
+    width: 100%;
+}
+html {
+  background: black;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.note{
+  background-color: rgba(65, 65, 63, 0.276);
+  padding: 1rem;
+  width: fit-content;
+  border-radius: 0.7rem;
+  max-width: 30rem;
+margin: 1rem;
+flex-wrap: wrap;
+}
+.notes{
+  display: flex;
+  gap: 1rem;
+  padding-block:1rem ;
+  padding-inline: 1rem;
+}
+.note-create-form{
+  display: flex; 
+  gap: 1rem; 
+  padding: 1rem;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+}
+

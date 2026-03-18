@@ -1,0 +1,70 @@
+.feed-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .feed {
+        max-width: 300px;
+        width: 100%;
+
+        .posts{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .post{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-inline: 0.5rem;
+            padding-block: 0.5rem ;
+            background: linear-gradient(to right , black , rgb(39, 38, 38));
+            .user{
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                .img-wrapper{
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid rgba(255, 0, 0, 0);
+                    background: conic-gradient( from 45deg ,rgb(220, 147, 12) , rgb(53, 0, 128), rgb(229, 183, 57) ) border-box;
+                }
+               
+                img{
+                    width: 3rem;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                }
+            }
+             .icons{
+                display: flex;
+                justify-content: space-between;
+                    .left{
+                        display: flex;
+                        gap: 0.5rem;
+                    }
+                    .like{
+                        color: red;
+                    }
+                    .unlike{
+                        color: white
+                    }
+                    svg {
+                        width: 1rem;
+                        aspect-ratio: 1/1;
+                        color: rgb(195, 195, 195);
+                    }
+                    button{
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+        }
+    }
+}

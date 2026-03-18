@@ -1,0 +1,15 @@
+Authentication 
+=> Register 
+=> Login
+=> Logout
+=> OTP based registation
+
+Post 
+=> Create 
+=> Can see the post 
+=> Like the post 
+=> Save the post 
+
+User 
+=> Following
+=> Followers
