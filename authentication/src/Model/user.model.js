@@ -3,7 +3,8 @@ const userSchema = new mongoose.Schema({
     name : String ,
     email : {
         type: String ,
-        unique : [true , "User exists wirh same email"]
+        unique : [true , "User exists wirh same email"] ,
+        required : [true,  "Email is required"]
     } ,
     password :  String
 })

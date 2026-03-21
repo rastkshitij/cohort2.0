@@ -35,3 +35,15 @@ export const registerValidator = [
 
     validate, // This will run the validation and return errors if any
 ];
+
+export const loginValidator = [
+  // Email
+  body("email")
+    .notEmpty().withMessage("Email is required")
+    .isEmail().withMessage("Invalid email format")
+    .normalizeEmail(),
+  // Password
+  body("password")
+    .notEmpty().withMessage("Password is required"),
+  validate
+];

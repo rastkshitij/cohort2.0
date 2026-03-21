@@ -1,6 +1,5 @@
 import nodeMialer from "nodemailer";
 import dotenv from "dotenv";
-dotenv.config({ path: "./.env" });
 
 console.log("EMAIL:", process.env.google_user);
 console.log("PASSWORD:", process.env.password);
@@ -16,15 +15,6 @@ const transporter = nodeMialer.createTransport({
   }
 })
   
-
-transporter.verify()
-    .then(() => {
-  console.log("Ready to send email");
-}   
-) 
-.catch((err) => {
-  console.log("Error with email transporter", err);
-}) 
 
 export async function sendEmail({to , subject  , html , text}){
     const mailOptions = {

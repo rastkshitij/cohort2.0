@@ -9,13 +9,13 @@
 
 const express = require ('express') ;
 const app  = express()
+app.use(express.json())
 app.get('/' , (req ,res)=>{
     res.send('This is home page')
 })
 let notes =[
 
 ]
-app.use(express.json())
 app.get('/notes' , (req ,res)=>{
     res.send(notes)
 })
