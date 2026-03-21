@@ -55,8 +55,9 @@ console.log("USERNAME:", username);
 
 export const verifyEmail = async (req, res) => {
   const { token } = req.query;
+  let decoded;
   try { 
-    const decoded = jwt.verify(token , process.env.JWT_SECRET)
+  decoded = jwt.verify(token , process.env.JWT_SECRET)
 
   }
     catch (err) { 

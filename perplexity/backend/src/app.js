@@ -2,6 +2,8 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import authRouter from './routes/auth.routes.js';
+import cors from "cors";
+import morgan from 'morgan';
 dotenv.config();
 
 const app = express();
@@ -9,7 +11,14 @@ const port = process.env.PORT || 3000;
 
 // Basic middleware
 app.use(express.json());
+app.use(morgan("dev"))
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // your frontend
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRouter);
 // Basic health check
