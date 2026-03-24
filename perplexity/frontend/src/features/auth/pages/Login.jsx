@@ -45,6 +45,7 @@ const result = await handleLogin(payload)
               onChange={(e)=>{
                 setemail(e.target.value)
               }}
+              
               required
               className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-200"
               placeholder="Enter your email"

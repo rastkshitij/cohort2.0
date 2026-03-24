@@ -2,6 +2,7 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import authRouter from './routes/auth.routes.js';
+import chatRouter from './routes/chat.routes.js';
 import cors from "cors";
 import morgan from 'morgan';
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRouter);
+app.use("/api/chats" , chatRouter)
 // Basic health check
 app.get('/', (req, res) => {
   res.json({ 

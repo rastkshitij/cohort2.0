@@ -1,9 +1,7 @@
 import nodeMialer from "nodemailer";
 import dotenv from "dotenv";
 
-console.log("EMAIL:", process.env.google_user);
-console.log("PASSWORD:", process.env.password);
-console.log("USER:", process.env.google_user);
+
 const transporter = nodeMialer.createTransport({
   service: "gmail",
   auth: {
