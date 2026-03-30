@@ -16,7 +16,7 @@ const { handleLogin } = useAuth()
     email , password
    }
 
-   await handleLogin(payload)
+  //  await handleLogin(payload)
     // Add authentication logic here
 const result = await handleLogin(payload)
 

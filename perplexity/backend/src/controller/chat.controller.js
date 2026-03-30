@@ -2,7 +2,7 @@
 import { generateResponse ,genrateTitle} from "../services/ai.service.js";
 import chatModel from "../model/chat.model.js";
 import messageModel from "../model/message.model.js";
-import { AIMessage } from "langchain";
+// import { AIMessage } from "langchain";
 export async function sendMessage(req, res) {
   const { message, chat: chatId } = req.body;
 
@@ -57,8 +57,8 @@ export async function sendMessage(req, res) {
 export async function getChats(req , res) {
   const user = req.user;
   const chats = await  chatModel.find({user :  user.id})
-  res.status(203).json({
-    message : "Chats feched sucessfully" , 
+  res.status(200).json({
+    message : "Chats fetched sucessfully" ,  success : true ,
     chats
   })
 }
@@ -90,7 +90,8 @@ if(!chat){
   })
 }
 res.status(200).json({
-  message : "Chat deleted successfully"
+  message : "Chat deleted successfully" ,
+  
 })
 }
 

@@ -5,8 +5,8 @@ const userSchema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
-      trim: true,
-      minlength: 3,
+      trim: true, // this removes extra sapce from the given input ex :  " kshitij " => "kshitij"
+      minlength: 3,// this makes the minimum length of the username to 3 if less than n3 throws error
     },
     email: {
       type: String,

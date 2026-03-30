@@ -2,7 +2,6 @@ import UserModel from "../model/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { sendEmail } from "../services/email.service.js";
-import authRouter from "../routes/auth.routes.js";
 export const register = async (req, res) => {
  console.log("REGISTER API HIT");
     const { username, email, password } = req.body;
@@ -109,7 +108,11 @@ export const login = async (req, res) => {
     })
   }
   const token = jwt.sign({ id : user._id, email : user.email}, process.env.JWT_SECRET, { expiresIn: "7d" });
-  res.cookie("token", token)
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: false, // true in production (HTTPS)
+  sameSite: "lax"
+})
   res.status(200).json({
     message : "Login successful",
     success : true,

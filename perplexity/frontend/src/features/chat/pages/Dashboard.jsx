@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import { useSelector } from 'react-redux'
 import { useChat } from '../hooks/useChat'
 import remarkGfm from 'remark-gfm'
-
+import { initializeSocketconnection } from '../service/chat.socket'
 const Dashboard = () => {
   const chat = useChat()
   const [chatInput, setChatInput] = useState('')
@@ -14,6 +14,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     chat.handleGetChats()
+    chat.initializeSocketConnection()
   }, [])
 
   useEffect(() => {

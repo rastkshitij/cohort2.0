@@ -8,6 +8,7 @@ const chatSchema = new mongoose.Schema(
       required: true,
     },
 
+    
     title: {
       type: String, // optional (like Perplexity auto title)
       default: "New Chat",

@@ -1,3 +1,4 @@
+import  "./src/config/env.js"
 import connectToDB from './src/config/database.js';
 import app from './src/app.js';
 import  http from  "http"

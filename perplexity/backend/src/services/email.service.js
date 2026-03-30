@@ -1,5 +1,5 @@
 import nodeMialer from "nodemailer";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
 
 const transporter = nodeMialer.createTransport({
